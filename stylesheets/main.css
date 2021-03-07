@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+button {
+	cursor: pointer;
+}
+a {
+	color: #000;
+}
+.wrap {
+	min-width: 320px;
+	padding: 30px 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.row {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -20px;
+}
+.col {
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 20px;
+}
+.news {
+	
+}
+.news__control {
+	margin-bottom: 30px;
+}
+.news__control a {
+	color: #000;
+}
+.news__sort {
+	display: flex;
+	align-items: center;
+}
+.news__add {
+	margin-bottom: 20px;
+}
+.news__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -20px;
+}
+.news-item {
+	border: 1px solid rgb(131, 131, 131);
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+	height: 100%;
+}
+.news-item__title {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.news-item__date {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.news-item__image {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.news-item__text {
+	margin-bottom: 15px;
+}
+.news-item__image img {
+	width: 100%;
+}
+.news-form form {
+	margin-bottom: 40px;
+}
+.news-form__del {
+	margin-bottom: 20px;
+}
+.form-control {
+	margin-bottom: 15px;
+}
+.form label sup {
+	color: red;
+}
+.form label input,
+.form label textarea {
+	margin-top: 5px;
+	padding: 10px 15px;
+	border:  1px solid rgb(147, 159, 197);
+	border-radius: 3px;
+	resize: none;
+} 
+
+.form label input[type="file"] {
+	margin-top: 0;
+	padding-left: 0;
+	border: none;
+}
+
+.news-form__hint {
+	font-size: 12px;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+.news-form__hint sup {
+	color: red;
+}
+
+.news-form__result.done {
+	color: green;
+}
+
+.news-form__result.error {
+	color: red;
+}
+
+@media (min-width: 540px) {
+	.col {
+		width: 50%;
+	}
+	.news__control {
+		display: flex;
+		justify-content: space-between;
+	}
+	.news__add {
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 760px) {
+	.col {
+		width: 33.333333%;
+	}
+}
+@media (min-width: 992px) {
+	.col {
+		width: 25%;
+	}
+}
