@@ -62,6 +62,9 @@
 				return false;  
 			}   
 		}   
+		public function getTable($order, $table) {
+			return $this->select('*', $table, null, $order);
+		}
 		public function add($to, $from, $where) {
 			$src = $from;
 			$dest = $to;

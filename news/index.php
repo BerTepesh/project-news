@@ -36,7 +36,22 @@
 					<?
 						$sort = $_GET['sort'];
 						$news = new News(SERVER,USER,PASS,DBNAME,TABLENAME);
-						$news->showAll($sort);
+
+						$uploaddir = "/images/";
+
+						foreach ($news->getTable($sort) as $row){
+							echo '<div class="col">';
+							echo '<div class="news-item">';
+							echo '<div class="news-item__title">'.$row["title"].'</div>';
+							echo '<div class="news-item__date">'.$row["date"].'</div>';
+							if($row["image"]) {
+								echo '<div class="news-item__image"><img src="'.$uploaddir.$row["image"].'" alt="'.$row["title"].'"></div>';
+							}
+							echo '<div class="news-item__text">'.$row["text"].'</div>';
+							echo "<div class='news-item__edit'><a href='edit/?news_id={$row["id"]}'>Изменить</a></div>";
+							echo '</div>';
+							echo '</div>';
+						}
 					?>
 				</div>
 			</div>
